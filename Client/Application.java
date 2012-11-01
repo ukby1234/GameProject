@@ -1,5 +1,4 @@
 
-
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -32,7 +31,7 @@ public class Application extends JFrame implements ActionListener
 	{ 
 		try
 		{
-			s = new Socket("aludra.usc.edu", 3500); //connect to the server
+			s = new Socket("localhost", 3500); //connect to the server
 			oou = new ObjectOutputStream(s.getOutputStream());
 			oin = new ObjectInputStream(s.getInputStream());
 			oou.writeObject(new String("GetPlayers"));
